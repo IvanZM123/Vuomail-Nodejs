@@ -1,0 +1,37 @@
+<%- include("includes/header"); %>
+    <%- include("components/navbar-dashboard"); %>
+
+    <div class="container py-2">
+        <%- include("components/alert"); %>
+        
+        <div class="row">
+            <% if (!mails.length) { %>
+                <div class="col-12 py-2">
+                    <p class="text-muted text-center">El buzon se encuentra vacio.</p>
+                </div>
+            <% } %>
+            
+            <div class="col-12">
+                <ul class="list-group w-100">
+                    <% for (let mail of mails) { %>
+                        <a href="/mails/viewer/<%= mail._id %>">
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-12 col-md-4">
+                                        <span class="text-muted"><%= mail.to %></span>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <span><%= mail.subject %></span>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <small><%= mail.created_at %></small>
+                                    </div>
+                                </div>
+                            </li>
+                        </a>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+<%- include("includes/footer"); %>

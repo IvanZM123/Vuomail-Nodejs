@@ -1,0 +1,14 @@
+<%- include("includes/header"); %>
+    <%- include("components/navbar-dashboard"); %>
+    <div class="container py-3">
+        <div class="jumbotron">
+            <h1>
+                <strong><%= mail.subject %></strong>
+            </h1>
+            <p class="lead"><%= mail.to %></p>
+            <p class=""><%= mail.created_at %></p>
+            <hr class="my-4">
+            <p class=""><%= mail.text %></p>
+        </div
+    </div>
+<%- include("includes/footer"); %>

@@ -1,0 +1,21 @@
+@import "./bootstrap.min.css";
+
+#banner {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (min-width: 1000px) {
+    #banner {
+        display: block;
+    }
+}
