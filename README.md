@@ -28,3 +28,6 @@ Once the packages have been downloaded, run the following commands:
 1. `mongod` This command started the MongoDB database, it needs to be there since you will have to interact with it.
 2. `npm run build` This command will compile the Typescript code to JavaScript, and generate a dist folder.
 3. `npm run serve` This command will execute the Javascript code and create a development server.
+
+## Demo
+Here is the demo link: [vuomail](https://vuomail.herokuapp.com)
